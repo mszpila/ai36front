@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+// import Header from "./header/Header";
+// import Sidebar from "./sidebar/Sidebar";
+// import MainPage from "./mainPage/MainPage";
+// import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+// import SearchPage from "./searchPage/SearchPage";
+// import RegistrationPage from "./userHandling/RegistrationPage";
+// import LoginPage from "./userHandling/LoginPage";
+import Steps from "./upload/Steps";
+// import VideoPage from "./videoPage/VideoPage";
+// import ChannelPage from "./channelPage/ChannelPage";
+// import EditPage from "./channelPage/EditPage";
+// import { useSelector } from "react-redux";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// const loginState = useSelector((state) => state.loginState);
+	return (
+		<div className="app">
+			{/* <BrowserRouter>
+				<Header />
+				<Sidebar />
+				<Switch>
+					<Route path="/edit">
+						<EditPage />
+					</Route>
+					<Route path="/channel">
+						<ChannelPage />
+					</Route>
+					<Route path="/video/:id">
+						<VideoPage />
+					</Route>
+					<Route path="/search/:searchTerm">
+						<SearchPage />
+					</Route>
+					<Route path="/upload"> */}
+			<Steps />
+			{/* </Route>
+					<Route path="/login">
+						{!loginState ? <LoginPage /> : <Redirect to="/" />}
+					</Route>
+					<Route path="/registration">
+						{!loginState ? (
+							<RegistrationPage />
+						) : (
+							<Redirect to="/" />
+						)}
+					</Route>
+					<Route path="/">
+						<MainPage />
+					</Route>
+				</Switch>
+			</BrowserRouter> */}
+		</div>
+	);
 }
 
 export default App;
